@@ -228,6 +228,13 @@ section {
   background-color: var(--news-flash);
   color: var(--watchdog-white);
   box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.breaking-card:hover,
+.breaking-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.35);
 }
 
 .breaking-card video {
@@ -361,9 +368,10 @@ footer {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 0.3s ease,
-              color 0.3s ease,
-              outline-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    outline-color 0.3s ease;
 }
 
 .social-links a:hover,
@@ -544,7 +552,9 @@ blockquote p {
   }
 
   .article-grid article:hover,
-  .article-grid article:focus-within {
+  .article-grid article:focus-within,
+  .breaking-card:hover,
+  .breaking-card:focus-within {
     transform: none;
   }
 }
