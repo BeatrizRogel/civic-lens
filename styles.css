@@ -248,6 +248,13 @@ section {
   background-color: var(--watchdog-white);
   border: 1px solid var(--story-subtitle);
   box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-grid article:hover,
+.article-grid article:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.35);
 }
 
 #alerts form {
@@ -354,13 +361,17 @@ footer {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              outline-color 0.3s ease;
 }
 
 .social-links a:hover,
 .social-links a:focus {
-  background-color: var(--watchdog-white);
-  color: var(--blue-bulletin);
-  outline: 3px solid var(--news-flash);
+  background-color: var(--blue-bulletin);
+  color: var(--watchdog-white);
+  outline: 2px solid var(--news-flash);
+  outline-offset: 1px;
 }
 
 .copyright {
@@ -531,10 +542,15 @@ blockquote p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+
+  .article-grid article:hover,
+  .article-grid article:focus-within {
+    transform: none;
+  }
 }
 
 
-/* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
+/* ///ADD/// Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports selector(nav:has(#menu--toggle:checked)) {
   .mobile-nav:has(#menu--toggle:checked) .menu {
     display: block;
