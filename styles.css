@@ -168,7 +168,7 @@ body.dark-mode input {
   outline-offset: -4px;
 }
 
-#menu--toggle:checked + .menu-button + .menu {
+#menu-toggle:checked + .menu-button + .menu {
   display: block;
 }
 
@@ -561,18 +561,18 @@ blockquote p {
 
 
 /* ///ADD/// Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports selector(nav:has(#menu--toggle:checked)) {
-  .mobile-nav:has(#menu--toggle:checked) .menu {
+@supports selector(nav:has(#menu-toggle:checked)) {
+  .mobile-nav:has(#menu-toggle:checked) .menu {
     display: block;
   }
 
-  .mobile-nav:has(#menu--toggle:checked) .menu-button {
+  .mobile-nav:has(#menu-toggle:checked) .menu-button {
     background-color: var(--blue-bulletin);
     outline: 2px solid var(--news-flash);
   }
 
   @media screen and (min-width: 920px) {
-    .mobile-nav:has(#menu--toggle:checked) .menu {
+    .mobile-nav:has(#menu-toggle:checked) .menu {
       display: flex;
     }
   }
